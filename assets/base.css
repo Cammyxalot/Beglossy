@@ -1177,6 +1177,7 @@ summary::-webkit-details-marker {
   .grid--peek.slider--mobile .grid__item {
     box-sizing: content-box;
     margin: 0;
+    width: 100em;
   }
 
   .grid--peek .grid__item {
@@ -1184,7 +1185,7 @@ summary::-webkit-details-marker {
   }
 
   .grid--peek.slider .grid__item:first-of-type {
-    margin-left: 1.5rem;
+    width:100em;
   }
 
   .grid--peek.slider .grid__item:last-of-type {

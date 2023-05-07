@@ -21,10 +21,12 @@
                   (min-width: 750px) {% if section.blocks.size == 1 %}710px{% else %}550px{% endif %},
                   calc(100vw - 30px)"
                   alt="{{ product.featured_media.preview_image.alt }}"
+                  height="{{ product.featured_media.preview_image.height }}"
                   width="{{ product.featured_media.preview_image.width }}"
                   loading="lazy"
                   class="pack-image{% if style == "inbundle" %} bundle-style-image{% endif %}"
                 >
+                    {% comment %} Fabien add height attribute 7 mai  {% endcomment %}
                 <p class="pack-product-title{% if style == "inbundle" %} bundle-style-title{% endif %}">1 {{ title }}</p>
                 <div class="pack-price-container{% if style == "inbundle" %} bundle-style-price{% endif %}">
                     <p class="pack-price-normal">{{ product.price | money_with_currency }}</p>
@@ -46,6 +48,7 @@
                           sizes="(min-width: 990px) {% if section.blocks.size <= 2 %}710px{% else %}550px{% endif %},
                           (min-width: 750px) {% if section.blocks.size == 1 %}710px{% else %}550px{% endif %},
                           calc(100vw - 30px)"
+                          height="{{ image1.height }}"
                           alt="{{ image1.alt }}"
                           width="{{ image1.width }}"
                           loading="lazy"
@@ -63,6 +66,7 @@
                           (min-width: 750px) {% if section.blocks.size == 1 %}710px{% else %}550px{% endif %},
                           calc(100vw - 30px)"
                           alt="{{ product.featured_media.preview_image.alt }}"
+                          height="{{ product.featured_media.preview_image.height }}"
                           width="{{ product.featured_media.preview_image.width }}"
                           loading="lazy"
                           class="pack-image{% if style == "inbundle" %} bundle-style-image{% endif %}"
@@ -94,6 +98,7 @@
                           (min-width: 750px) {% if section.blocks.size == 1 %}710px{% else %}550px{% endif %},
                           calc(100vw - 30px)"
                           alt="{{ image2.alt }}"
+                          height="{{ image2.height }}"
                           width="{{ image2.width }}"
                           loading="lazy"
                           class="pack-image{% if style == "inbundle" %} bundle-style-image{% endif %}"
@@ -110,6 +115,7 @@
                           (min-width: 750px) {% if section.blocks.size == 1 %}710px{% else %}550px{% endif %},
                           calc(100vw - 30px)"
                           alt="{{ product.featured_media.preview_image.alt }}"
+                          height="{{ product.featured_media.preview_image.height }}"
                           width="{{ product.featured_media.preview_image.width }}"
                           loading="lazy"
                           class="pack-image{% if style == "inbundle" %} bundle-style-image{% endif %}"

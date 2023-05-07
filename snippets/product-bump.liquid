@@ -41,7 +41,7 @@
           </div>
           {% if product_upsell.featured_media.preview_image != blank and offimg != true %}
           <a href="{{ product_upsell.url }}">
-            <img class="bump-product-image" src="{{ product_upsell.featured_media.preview_image | img_url: '100x100' }}">
+            <img loading="lazy" width="" height="" class="bump-product-image" src="{{ product_upsell.featured_media.preview_image | img_url: '100x100' }}">
           </a>
           {% endif %}
       </div>

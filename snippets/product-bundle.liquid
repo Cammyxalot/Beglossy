@@ -12,7 +12,7 @@
       <p class="bundle-title">{{ title }}</p>
       <div class="bundle-items mt-2">
         <div class="bundle-item">
-          <a href="{{ product.url }}"><img class="bundle-product-image" src="{{ product.featured_media.preview_image | img_url: '100x100' }}"></a>
+          <a href="{{ product.url }}"><img class="bundle-product-image" loading="lazy" width="" height="" src="{{ product.featured_media.preview_image | img_url: '100x100' }}"></a>
           <div class="bundle-item-datas">
             <a href="{{ product.url }}"><p class="bundle-product-title">{{ product.title }}</p></a>
             <p class="bundle-product-price">{{ product.price | money_with_currency }}</p>
@@ -31,7 +31,7 @@
           <p class="bundle-plus-icon">+</p>
         </div>
         <div class="bundle-item">
-          <a href="{{ product_upsell.url }}"><img class="bundle-product-image" src="{{ product_upsell.featured_media.preview_image | img_url: '100x100' }}"></a>
+          <a href="{{ product_upsell.url }}"><img loading="lazy" height="" width="" class="bundle-product-image" src="{{ product_upsell.featured_media.preview_image | img_url: '100x100' }}"></a>
           <div class="bundle-item-datas">
             <a href="{{ product_upsell.url }}"><p class="bundle-product-title">{{ product_upsell.title }}</p></a>
             <p class="bundle-product-price">{{ product_upsell.price | money_with_currency }}</p>
