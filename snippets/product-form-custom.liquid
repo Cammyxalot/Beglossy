@@ -1,0 +1,355 @@
+{% form 'product', product, id: form_id, class: 'product-single__form' %}
+  {%- assign enable_dynamic_buttons = false -%}
+  {% if show_dynamic_checkout and template != 'product.preorder' %}
+    {%- assign enable_dynamic_buttons = true -%}
+  {% endif %}
+
+<div class="product-block">
+                      
+{%- assign current_variant_id =  product.selected_or_first_available_variant.id -%}
+<div class="variant-wrapper js" data-type="button">
+  <label class="variant__label" for="ProductSelect-option-4">{{ section.settings.color_block_title }}</label>
+  <fieldset class="variant-input-wrap bundler-form" name="Choisissez vos vernis" data-index="option4" data-handle="choisissez-vos-vernis" id="ProductSelect-option-4">
+  <div id="ProductSelect-option-inner">
+  
+  {% if current_variant_id == 41778656673971 %}
+  <div class="bundler-products" id="block-one" data-parent-index="1">
+     <input type="hidden" name="properties[Vernis]" id="color1" value="">
+  	 <div class="bundler-products-picker"  data-index="1">
+        <button type="button" class="bundler-products-picker-trigger_button js_bundler-products-picker-trigger_button">
+          <svg width="25" height="47" viewBox="0 0 25 47" fill="none" xmlns="http://www.w3.org/2000/svg" class="bundler-products-picker-trigger_button-image icon icon--full-color">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.571741 29.0815C0.601467 23.5593 1.19683 16.8654 3.24529 11.7139C5.26265 6.64068 6.75662 3.85151 8.17275 2.33642C8.89184 1.56708 9.59927 1.11619 10.35 0.864264C11.0921 0.615247 11.8489 0.570618 12.6406 0.570618C16.062 0.570618 19.6407 3.61478 22.3525 11.7366C23.7361 15.8805 24.4196 21.826 24.5279 27.2324C24.5821 29.9401 24.4922 32.5251 24.2705 34.6962C24.0503 36.853 23.6959 38.6461 23.1991 39.7405C20.9488 44.6968 16.2033 46.4804 11.7075 46.147C7.24 45.8157 2.87372 43.382 1.35507 39.7277C1.307 39.612 1.26529 39.4427 1.22723 39.2553C1.18713 39.0579 1.14497 38.8085 1.10222 38.5138C1.01663 37.9239 0.926813 37.1401 0.845895 36.2052C0.684024 34.3348 0.556845 31.8488 0.571741 29.0815ZM1.7516 39.5629C1.26331 38.388 -0.392252 22.0237 3.6443 11.8726C7.68086 1.72148 9.52139 1.00002 12.6406 1.00002C15.7597 1.00002 19.2431 3.77972 21.9452 11.8726C24.6725 20.0411 24.6725 35.4563 22.8081 39.5629C18.4936 49.0658 4.6244 46.4756 1.7516 39.5629ZM12.2111 23.3752V20.3242H12.5501V23.3752H15.6011L15.6011 23.7142H12.5501V26.7652H12.2111V23.7142H9.16011V23.3752H12.2111Z" fill="#000"></path>
+          </svg>
+        </button>
+        <div class="bundler-products-picker-products js-bundler-products-picker-products">
+          {%- for block in blocks -%}
+            {%- if block.type == 'color_block' -%}
+              <button type="button" class="bundler-products-picker-products-product_button js-bundler-products-picker-products-product_button {% unless block.settings.clickable %}bundler-products-picker-trigger_button---is-disabled{% endunless %}" data-alt="{{ block.settings.text }}" data-image-src="{{ block.settings.color_image | img_url: 'x122' }}"> 
+                <img src="{{ block.settings.color_image | img_url: 'x122' }}" alt="{{ block.settings.text }}" width="122" height="122" class="bundler-products-picker-products-product_button-image"> 
+                <span class="bundler-products-picker-products-product_button-label">{{ block.settings.text }}</span> 
+              </button>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+      <div class="bundler-products-picker"  data-index="2">
+        <button type="button" class="bundler-products-picker-trigger_button js_bundler-products-picker-trigger_button bundler-products-picker-trigger_button---is-disabled">
+          <svg width="25" height="47" viewBox="0 0 25 47" fill="none" xmlns="http://www.w3.org/2000/svg" class="bundler-products-picker-trigger_button-image icon icon--full-color">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.571741 29.0815C0.601467 23.5593 1.19683 16.8654 3.24529 11.7139C5.26265 6.64068 6.75662 3.85151 8.17275 2.33642C8.89184 1.56708 9.59927 1.11619 10.35 0.864264C11.0921 0.615247 11.8489 0.570618 12.6406 0.570618C16.062 0.570618 19.6407 3.61478 22.3525 11.7366C23.7361 15.8805 24.4196 21.826 24.5279 27.2324C24.5821 29.9401 24.4922 32.5251 24.2705 34.6962C24.0503 36.853 23.6959 38.6461 23.1991 39.7405C20.9488 44.6968 16.2033 46.4804 11.7075 46.147C7.24 45.8157 2.87372 43.382 1.35507 39.7277C1.307 39.612 1.26529 39.4427 1.22723 39.2553C1.18713 39.0579 1.14497 38.8085 1.10222 38.5138C1.01663 37.9239 0.926813 37.1401 0.845895 36.2052C0.684024 34.3348 0.556845 31.8488 0.571741 29.0815ZM1.7516 39.5629C1.26331 38.388 -0.392252 22.0237 3.6443 11.8726C7.68086 1.72148 9.52139 1.00002 12.6406 1.00002C15.7597 1.00002 19.2431 3.77972 21.9452 11.8726C24.6725 20.0411 24.6725 35.4563 22.8081 39.5629C18.4936 49.0658 4.6244 46.4756 1.7516 39.5629ZM12.2111 23.3752V20.3242H12.5501V23.3752H15.6011L15.6011 23.7142H12.5501V26.7652H12.2111V23.7142H9.16011V23.3752H12.2111Z" fill="#000"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="bundler-products-picker"  data-index="2">
+        <button type="button" class="bundler-products-picker-trigger_button js_bundler-products-picker-trigger_button bundler-products-picker-trigger_button---is-disabled">
+          <svg width="25" height="47" viewBox="0 0 25 47" fill="none" xmlns="http://www.w3.org/2000/svg" class="bundler-products-picker-trigger_button-image icon icon--full-color">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.571741 29.0815C0.601467 23.5593 1.19683 16.8654 3.24529 11.7139C5.26265 6.64068 6.75662 3.85151 8.17275 2.33642C8.89184 1.56708 9.59927 1.11619 10.35 0.864264C11.0921 0.615247 11.8489 0.570618 12.6406 0.570618C16.062 0.570618 19.6407 3.61478 22.3525 11.7366C23.7361 15.8805 24.4196 21.826 24.5279 27.2324C24.5821 29.9401 24.4922 32.5251 24.2705 34.6962C24.0503 36.853 23.6959 38.6461 23.1991 39.7405C20.9488 44.6968 16.2033 46.4804 11.7075 46.147C7.24 45.8157 2.87372 43.382 1.35507 39.7277C1.307 39.612 1.26529 39.4427 1.22723 39.2553C1.18713 39.0579 1.14497 38.8085 1.10222 38.5138C1.01663 37.9239 0.926813 37.1401 0.845895 36.2052C0.684024 34.3348 0.556845 31.8488 0.571741 29.0815ZM1.7516 39.5629C1.26331 38.388 -0.392252 22.0237 3.6443 11.8726C7.68086 1.72148 9.52139 1.00002 12.6406 1.00002C15.7597 1.00002 19.2431 3.77972 21.9452 11.8726C24.6725 20.0411 24.6725 35.4563 22.8081 39.5629C18.4936 49.0658 4.6244 46.4756 1.7516 39.5629ZM12.2111 23.3752V20.3242H12.5501V23.3752H15.6011L15.6011 23.7142H12.5501V26.7652H12.2111V23.7142H9.16011V23.3752H12.2111Z" fill="#000"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    {% elsif current_variant_id == 41778656706739 %}
+    <div class="bundler-products" id="block-two" data-parent-index="2">
+    <input type="hidden" name="properties[Vernis 1]" id="color1" value="">
+    <input type="hidden" name="properties[Vernis 2]" id="color2" value="">
+    <input type="hidden" name="properties[Vernis 3]" id="color3" value="">
+  	 <div class="bundler-products-picker"  data-index="1">
+        <button type="button" class="bundler-products-picker-trigger_button js_bundler-products-picker-trigger_button">
+          <svg width="25" height="47" viewBox="0 0 25 47" fill="none" xmlns="http://www.w3.org/2000/svg" class="bundler-products-picker-trigger_button-image icon icon--full-color">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.571741 29.0815C0.601467 23.5593 1.19683 16.8654 3.24529 11.7139C5.26265 6.64068 6.75662 3.85151 8.17275 2.33642C8.89184 1.56708 9.59927 1.11619 10.35 0.864264C11.0921 0.615247 11.8489 0.570618 12.6406 0.570618C16.062 0.570618 19.6407 3.61478 22.3525 11.7366C23.7361 15.8805 24.4196 21.826 24.5279 27.2324C24.5821 29.9401 24.4922 32.5251 24.2705 34.6962C24.0503 36.853 23.6959 38.6461 23.1991 39.7405C20.9488 44.6968 16.2033 46.4804 11.7075 46.147C7.24 45.8157 2.87372 43.382 1.35507 39.7277C1.307 39.612 1.26529 39.4427 1.22723 39.2553C1.18713 39.0579 1.14497 38.8085 1.10222 38.5138C1.01663 37.9239 0.926813 37.1401 0.845895 36.2052C0.684024 34.3348 0.556845 31.8488 0.571741 29.0815ZM1.7516 39.5629C1.26331 38.388 -0.392252 22.0237 3.6443 11.8726C7.68086 1.72148 9.52139 1.00002 12.6406 1.00002C15.7597 1.00002 19.2431 3.77972 21.9452 11.8726C24.6725 20.0411 24.6725 35.4563 22.8081 39.5629C18.4936 49.0658 4.6244 46.4756 1.7516 39.5629ZM12.2111 23.3752V20.3242H12.5501V23.3752H15.6011L15.6011 23.7142H12.5501V26.7652H12.2111V23.7142H9.16011V23.3752H12.2111Z" fill="#000"></path>
+          </svg>
+        </button>
+        <div class="bundler-products-picker-products js-bundler-products-picker-products">
+          {%- for block in blocks -%}
+            {%- if block.type == 'color_block' -%}
+              <button type="button" class="bundler-products-picker-products-product_button js-bundler-products-picker-products-product_button {% unless block.settings.clickable %}bundler-products-picker-trigger_button---is-disabled{% endunless %}" data-alt="{{ block.settings.text }}" data-image-src="{{ block.settings.color_image | img_url: 'x122' }}"> 
+                <img src="{{ block.settings.color_image | img_url: 'x122' }}" alt="{{ block.settings.text }}" width="122" height="122" class="bundler-products-picker-products-product_button-image"> 
+                <span class="bundler-products-picker-products-product_button-label">{{ block.settings.text }}</span> 
+              </button>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+      <div class="bundler-products-picker"  data-index="2">
+        <button type="button" class="bundler-products-picker-trigger_button js_bundler-products-picker-trigger_button">
+          <svg width="25" height="47" viewBox="0 0 25 47" fill="none" xmlns="http://www.w3.org/2000/svg" class="bundler-products-picker-trigger_button-image icon icon--full-color">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.571741 29.0815C0.601467 23.5593 1.19683 16.8654 3.24529 11.7139C5.26265 6.64068 6.75662 3.85151 8.17275 2.33642C8.89184 1.56708 9.59927 1.11619 10.35 0.864264C11.0921 0.615247 11.8489 0.570618 12.6406 0.570618C16.062 0.570618 19.6407 3.61478 22.3525 11.7366C23.7361 15.8805 24.4196 21.826 24.5279 27.2324C24.5821 29.9401 24.4922 32.5251 24.2705 34.6962C24.0503 36.853 23.6959 38.6461 23.1991 39.7405C20.9488 44.6968 16.2033 46.4804 11.7075 46.147C7.24 45.8157 2.87372 43.382 1.35507 39.7277C1.307 39.612 1.26529 39.4427 1.22723 39.2553C1.18713 39.0579 1.14497 38.8085 1.10222 38.5138C1.01663 37.9239 0.926813 37.1401 0.845895 36.2052C0.684024 34.3348 0.556845 31.8488 0.571741 29.0815ZM1.7516 39.5629C1.26331 38.388 -0.392252 22.0237 3.6443 11.8726C7.68086 1.72148 9.52139 1.00002 12.6406 1.00002C15.7597 1.00002 19.2431 3.77972 21.9452 11.8726C24.6725 20.0411 24.6725 35.4563 22.8081 39.5629C18.4936 49.0658 4.6244 46.4756 1.7516 39.5629ZM12.2111 23.3752V20.3242H12.5501V23.3752H15.6011L15.6011 23.7142H12.5501V26.7652H12.2111V23.7142H9.16011V23.3752H12.2111Z" fill="#000"></path>
+          </svg>
+        </button>
+        <div class="bundler-products-picker-products js-bundler-products-picker-products">
+          {%- for block in blocks -%}
+            {%- if block.type == 'color_block' -%}
+              <button type="button" class="bundler-products-picker-products-product_button js-bundler-products-picker-products-product_button  {% unless block.settings.clickable %}bundler-products-picker-trigger_button---is-disabled{% endunless %}" data-alt="{{ block.settings.text }}" data-image-src="{{ block.settings.color_image | img_url: 'x122' }}"> 
+                <img src="{{ block.settings.color_image | img_url: 'x122' }}" alt="{{ block.settings.text }}" width="122" height="122" class="bundler-products-picker-products-product_button-image"> 
+                <span class="bundler-products-picker-products-product_button-label">{{ block.settings.text }}</span> 
+              </button>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+      <div class="bundler-products-picker"  data-index="3">
+        <button type="button" class="bundler-products-picker-trigger_button js_bundler-products-picker-trigger_button">
+          <svg width="25" height="47" viewBox="0 0 25 47" fill="none" xmlns="http://www.w3.org/2000/svg" class="bundler-products-picker-trigger_button-image icon icon--full-color">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.571741 29.0815C0.601467 23.5593 1.19683 16.8654 3.24529 11.7139C5.26265 6.64068 6.75662 3.85151 8.17275 2.33642C8.89184 1.56708 9.59927 1.11619 10.35 0.864264C11.0921 0.615247 11.8489 0.570618 12.6406 0.570618C16.062 0.570618 19.6407 3.61478 22.3525 11.7366C23.7361 15.8805 24.4196 21.826 24.5279 27.2324C24.5821 29.9401 24.4922 32.5251 24.2705 34.6962C24.0503 36.853 23.6959 38.6461 23.1991 39.7405C20.9488 44.6968 16.2033 46.4804 11.7075 46.147C7.24 45.8157 2.87372 43.382 1.35507 39.7277C1.307 39.612 1.26529 39.4427 1.22723 39.2553C1.18713 39.0579 1.14497 38.8085 1.10222 38.5138C1.01663 37.9239 0.926813 37.1401 0.845895 36.2052C0.684024 34.3348 0.556845 31.8488 0.571741 29.0815ZM1.7516 39.5629C1.26331 38.388 -0.392252 22.0237 3.6443 11.8726C7.68086 1.72148 9.52139 1.00002 12.6406 1.00002C15.7597 1.00002 19.2431 3.77972 21.9452 11.8726C24.6725 20.0411 24.6725 35.4563 22.8081 39.5629C18.4936 49.0658 4.6244 46.4756 1.7516 39.5629ZM12.2111 23.3752V20.3242H12.5501V23.3752H15.6011L15.6011 23.7142H12.5501V26.7652H12.2111V23.7142H9.16011V23.3752H12.2111Z" fill="#000"></path>
+          </svg>
+        </button>
+        <div class="bundler-products-picker-products js-bundler-products-picker-products">
+          {%- for block in blocks -%}
+            {%- if block.type == 'color_block' -%}
+              <button type="button" class="bundler-products-picker-products-product_button js-bundler-products-picker-products-product_button  {% unless block.settings.clickable %}bundler-products-picker-trigger_button---is-disabled{% endunless %}" data-alt="{{ block.settings.text }}" data-image-src="{{ block.settings.color_image | img_url: 'x122' }}"> 
+                <img src="{{ block.settings.color_image | img_url: 'x122' }}" alt="{{ block.settings.text }}" width="122" height="122" class="bundler-products-picker-products-product_button-image"> 
+                <span class="bundler-products-picker-products-product_button-label">{{ block.settings.text }}</span> 
+              </button>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    {% elsif current_variant_id == 41781740142771 %}
+    <div class="bundler-products" id="block-three" data-parent-index="3">
+    <input type="hidden" name="properties[Vernis 1]" id="color1" value="">
+    <input type="hidden" name="properties[Vernis 2]" id="color2" value="">
+    <input type="hidden" name="properties[Vernis 3]" id="color3" value="">
+    <input type="hidden" name="properties[Vernis 4]" id="color4" value="">
+    <input type="hidden" name="properties[Vernis 5]" id="color5" value="">
+  	 <div class="bundler-products-picker"  data-index="1">
+        <button type="button" class="bundler-products-picker-trigger_button js_bundler-products-picker-trigger_button">
+          <svg width="25" height="47" viewBox="0 0 25 47" fill="none" xmlns="http://www.w3.org/2000/svg" class="bundler-products-picker-trigger_button-image icon icon--full-color">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.571741 29.0815C0.601467 23.5593 1.19683 16.8654 3.24529 11.7139C5.26265 6.64068 6.75662 3.85151 8.17275 2.33642C8.89184 1.56708 9.59927 1.11619 10.35 0.864264C11.0921 0.615247 11.8489 0.570618 12.6406 0.570618C16.062 0.570618 19.6407 3.61478 22.3525 11.7366C23.7361 15.8805 24.4196 21.826 24.5279 27.2324C24.5821 29.9401 24.4922 32.5251 24.2705 34.6962C24.0503 36.853 23.6959 38.6461 23.1991 39.7405C20.9488 44.6968 16.2033 46.4804 11.7075 46.147C7.24 45.8157 2.87372 43.382 1.35507 39.7277C1.307 39.612 1.26529 39.4427 1.22723 39.2553C1.18713 39.0579 1.14497 38.8085 1.10222 38.5138C1.01663 37.9239 0.926813 37.1401 0.845895 36.2052C0.684024 34.3348 0.556845 31.8488 0.571741 29.0815ZM1.7516 39.5629C1.26331 38.388 -0.392252 22.0237 3.6443 11.8726C7.68086 1.72148 9.52139 1.00002 12.6406 1.00002C15.7597 1.00002 19.2431 3.77972 21.9452 11.8726C24.6725 20.0411 24.6725 35.4563 22.8081 39.5629C18.4936 49.0658 4.6244 46.4756 1.7516 39.5629ZM12.2111 23.3752V20.3242H12.5501V23.3752H15.6011L15.6011 23.7142H12.5501V26.7652H12.2111V23.7142H9.16011V23.3752H12.2111Z" fill="#000"></path>
+          </svg>
+        </button>
+        <div class="bundler-products-picker-products js-bundler-products-picker-products">
+          {%- for block in blocks -%}
+            {%- if block.type == 'color_block' -%}
+              <button type="button" class="bundler-products-picker-products-product_button js-bundler-products-picker-products-product_button  {% unless block.settings.clickable %}bundler-products-picker-trigger_button---is-disabled{% endunless %}" data-alt="{{ block.settings.text }}" data-image-src="{{ block.settings.color_image | img_url: 'x122' }}"> 
+                <img src="{{ block.settings.color_image | img_url: 'x122' }}" alt="{{ block.settings.text }}" width="122" height="122" class="bundler-products-picker-products-product_button-image"> 
+                <span class="bundler-products-picker-products-product_button-label">{{ block.settings.text }}</span> 
+              </button>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+      <div class="bundler-products-picker"  data-index="2">
+        <button type="button" class="bundler-products-picker-trigger_button js_bundler-products-picker-trigger_button">
+          <svg width="25" height="47" viewBox="0 0 25 47" fill="none" xmlns="http://www.w3.org/2000/svg" class="bundler-products-picker-trigger_button-image icon icon--full-color">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.571741 29.0815C0.601467 23.5593 1.19683 16.8654 3.24529 11.7139C5.26265 6.64068 6.75662 3.85151 8.17275 2.33642C8.89184 1.56708 9.59927 1.11619 10.35 0.864264C11.0921 0.615247 11.8489 0.570618 12.6406 0.570618C16.062 0.570618 19.6407 3.61478 22.3525 11.7366C23.7361 15.8805 24.4196 21.826 24.5279 27.2324C24.5821 29.9401 24.4922 32.5251 24.2705 34.6962C24.0503 36.853 23.6959 38.6461 23.1991 39.7405C20.9488 44.6968 16.2033 46.4804 11.7075 46.147C7.24 45.8157 2.87372 43.382 1.35507 39.7277C1.307 39.612 1.26529 39.4427 1.22723 39.2553C1.18713 39.0579 1.14497 38.8085 1.10222 38.5138C1.01663 37.9239 0.926813 37.1401 0.845895 36.2052C0.684024 34.3348 0.556845 31.8488 0.571741 29.0815ZM1.7516 39.5629C1.26331 38.388 -0.392252 22.0237 3.6443 11.8726C7.68086 1.72148 9.52139 1.00002 12.6406 1.00002C15.7597 1.00002 19.2431 3.77972 21.9452 11.8726C24.6725 20.0411 24.6725 35.4563 22.8081 39.5629C18.4936 49.0658 4.6244 46.4756 1.7516 39.5629ZM12.2111 23.3752V20.3242H12.5501V23.3752H15.6011L15.6011 23.7142H12.5501V26.7652H12.2111V23.7142H9.16011V23.3752H12.2111Z" fill="#000"></path>
+          </svg>
+        </button>
+        <div class="bundler-products-picker-products js-bundler-products-picker-products">
+          {%- for block in blocks -%}
+            {%- if block.type == 'color_block' -%}
+              <button type="button" class="bundler-products-picker-products-product_button js-bundler-products-picker-products-product_button  {% unless block.settings.clickable %}bundler-products-picker-trigger_button---is-disabled{% endunless %}" data-alt="{{ block.settings.text }}" data-image-src="{{ block.settings.color_image | img_url: 'x122' }}"> 
+                <img src="{{ block.settings.color_image | img_url: 'x122' }}" alt="{{ block.settings.text }}" width="122" height="122" class="bundler-products-picker-products-product_button-image"> 
+                <span class="bundler-products-picker-products-product_button-label">{{ block.settings.text }}</span> 
+              </button>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+      <div class="bundler-products-picker"  data-index="3"> 
+        <button type="button" class="bundler-products-picker-trigger_button js_bundler-products-picker-trigger_button">
+          <svg width="25" height="47" viewBox="0 0 25 47" fill="none" xmlns="http://www.w3.org/2000/svg" class="bundler-products-picker-trigger_button-image icon icon--full-color">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.571741 29.0815C0.601467 23.5593 1.19683 16.8654 3.24529 11.7139C5.26265 6.64068 6.75662 3.85151 8.17275 2.33642C8.89184 1.56708 9.59927 1.11619 10.35 0.864264C11.0921 0.615247 11.8489 0.570618 12.6406 0.570618C16.062 0.570618 19.6407 3.61478 22.3525 11.7366C23.7361 15.8805 24.4196 21.826 24.5279 27.2324C24.5821 29.9401 24.4922 32.5251 24.2705 34.6962C24.0503 36.853 23.6959 38.6461 23.1991 39.7405C20.9488 44.6968 16.2033 46.4804 11.7075 46.147C7.24 45.8157 2.87372 43.382 1.35507 39.7277C1.307 39.612 1.26529 39.4427 1.22723 39.2553C1.18713 39.0579 1.14497 38.8085 1.10222 38.5138C1.01663 37.9239 0.926813 37.1401 0.845895 36.2052C0.684024 34.3348 0.556845 31.8488 0.571741 29.0815ZM1.7516 39.5629C1.26331 38.388 -0.392252 22.0237 3.6443 11.8726C7.68086 1.72148 9.52139 1.00002 12.6406 1.00002C15.7597 1.00002 19.2431 3.77972 21.9452 11.8726C24.6725 20.0411 24.6725 35.4563 22.8081 39.5629C18.4936 49.0658 4.6244 46.4756 1.7516 39.5629ZM12.2111 23.3752V20.3242H12.5501V23.3752H15.6011L15.6011 23.7142H12.5501V26.7652H12.2111V23.7142H9.16011V23.3752H12.2111Z" fill="#000"></path>
+          </svg>
+        </button>
+        <div class="bundler-products-picker-products js-bundler-products-picker-products">
+          {%- for block in blocks -%}
+            {%- if block.type == 'color_block' -%}
+              <button type="button" class="bundler-products-picker-products-product_button js-bundler-products-picker-products-product_button  {% unless block.settings.clickable %}bundler-products-picker-trigger_button---is-disabled{% endunless %}" data-alt="{{ block.settings.text }}" data-image-src="{{ block.settings.color_image | img_url: 'x122' }}"> 
+                <img src="{{ block.settings.color_image | img_url: 'x122' }}" alt="{{ block.settings.text }}" width="122" height="122" class="bundler-products-picker-products-product_button-image"> 
+                <span class="bundler-products-picker-products-product_button-label">{{ block.settings.text }}</span> 
+              </button>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+      <div class="bundler-products-picker"  data-index="4">
+        <button type="button" class="bundler-products-picker-trigger_button js_bundler-products-picker-trigger_button">
+          <svg width="25" height="47" viewBox="0 0 25 47" fill="none" xmlns="http://www.w3.org/2000/svg" class="bundler-products-picker-trigger_button-image icon icon--full-color">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.571741 29.0815C0.601467 23.5593 1.19683 16.8654 3.24529 11.7139C5.26265 6.64068 6.75662 3.85151 8.17275 2.33642C8.89184 1.56708 9.59927 1.11619 10.35 0.864264C11.0921 0.615247 11.8489 0.570618 12.6406 0.570618C16.062 0.570618 19.6407 3.61478 22.3525 11.7366C23.7361 15.8805 24.4196 21.826 24.5279 27.2324C24.5821 29.9401 24.4922 32.5251 24.2705 34.6962C24.0503 36.853 23.6959 38.6461 23.1991 39.7405C20.9488 44.6968 16.2033 46.4804 11.7075 46.147C7.24 45.8157 2.87372 43.382 1.35507 39.7277C1.307 39.612 1.26529 39.4427 1.22723 39.2553C1.18713 39.0579 1.14497 38.8085 1.10222 38.5138C1.01663 37.9239 0.926813 37.1401 0.845895 36.2052C0.684024 34.3348 0.556845 31.8488 0.571741 29.0815ZM1.7516 39.5629C1.26331 38.388 -0.392252 22.0237 3.6443 11.8726C7.68086 1.72148 9.52139 1.00002 12.6406 1.00002C15.7597 1.00002 19.2431 3.77972 21.9452 11.8726C24.6725 20.0411 24.6725 35.4563 22.8081 39.5629C18.4936 49.0658 4.6244 46.4756 1.7516 39.5629ZM12.2111 23.3752V20.3242H12.5501V23.3752H15.6011L15.6011 23.7142H12.5501V26.7652H12.2111V23.7142H9.16011V23.3752H12.2111Z" fill="#000"></path>
+          </svg>
+        </button>
+        <div class="bundler-products-picker-products js-bundler-products-picker-products">
+          {%- for block in blocks -%}
+            {%- if block.type == 'color_block' -%}
+              <button type="button" class="bundler-products-picker-products-product_button js-bundler-products-picker-products-product_button  {% unless block.settings.clickable %}bundler-products-picker-trigger_button---is-disabled{% endunless %}" data-alt="{{ block.settings.text }}" data-image-src="{{ block.settings.color_image | img_url: 'x122' }}"> 
+                <img src="{{ block.settings.color_image | img_url: 'x122' }}" alt="{{ block.settings.text }}" width="122" height="122" class="bundler-products-picker-products-product_button-image"> 
+                <span class="bundler-products-picker-products-product_button-label">{{ block.settings.text }}</span> 
+              </button>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+      <div class="bundler-products-picker" data-index="5">
+        <button type="button" class="bundler-products-picker-trigger_button js_bundler-products-picker-trigger_button">
+          <svg width="25" height="47" viewBox="0 0 25 47" fill="none" xmlns="http://www.w3.org/2000/svg" class="bundler-products-picker-trigger_button-image icon icon--full-color">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.571741 29.0815C0.601467 23.5593 1.19683 16.8654 3.24529 11.7139C5.26265 6.64068 6.75662 3.85151 8.17275 2.33642C8.89184 1.56708 9.59927 1.11619 10.35 0.864264C11.0921 0.615247 11.8489 0.570618 12.6406 0.570618C16.062 0.570618 19.6407 3.61478 22.3525 11.7366C23.7361 15.8805 24.4196 21.826 24.5279 27.2324C24.5821 29.9401 24.4922 32.5251 24.2705 34.6962C24.0503 36.853 23.6959 38.6461 23.1991 39.7405C20.9488 44.6968 16.2033 46.4804 11.7075 46.147C7.24 45.8157 2.87372 43.382 1.35507 39.7277C1.307 39.612 1.26529 39.4427 1.22723 39.2553C1.18713 39.0579 1.14497 38.8085 1.10222 38.5138C1.01663 37.9239 0.926813 37.1401 0.845895 36.2052C0.684024 34.3348 0.556845 31.8488 0.571741 29.0815ZM1.7516 39.5629C1.26331 38.388 -0.392252 22.0237 3.6443 11.8726C7.68086 1.72148 9.52139 1.00002 12.6406 1.00002C15.7597 1.00002 19.2431 3.77972 21.9452 11.8726C24.6725 20.0411 24.6725 35.4563 22.8081 39.5629C18.4936 49.0658 4.6244 46.4756 1.7516 39.5629ZM12.2111 23.3752V20.3242H12.5501V23.3752H15.6011L15.6011 23.7142H12.5501V26.7652H12.2111V23.7142H9.16011V23.3752H12.2111Z" fill="#000"></path>
+          </svg>
+        </button>
+        <div class="bundler-products-picker-products js-bundler-products-picker-products">
+          {%- for block in blocks -%}
+            {%- if block.type == 'color_block' -%}
+              <button type="button" class="bundler-products-picker-products-product_button js-bundler-products-picker-products-product_button  {% unless block.settings.clickable %}bundler-products-picker-trigger_button---is-disabled{% endunless %}" data-alt="{{ block.settings.text }}" data-image-src="{{ block.settings.color_image | img_url: 'x122' }}"> 
+                <img src="{{ block.settings.color_image | img_url: 'x122' }}" alt="{{ block.settings.text }}" width="122" height="122" class="bundler-products-picker-products-product_button-image"> 
+                <span class="bundler-products-picker-products-product_button-label">{{ block.settings.text }}</span> 
+              </button>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+   {% endif %}
+  </div>
+ </fieldset>
+</div>
+
+
+</div>
+
+  {% if enable_dynamic_buttons %}
+    <div class="payment-buttons">
+  {% endif %}
+
+    {%- liquid
+      assign default_text = 'products.product.add_to_cart' | t
+      assign button_text = 'products.product.add_to_cart' | t
+      if template == 'product.preorder'
+        assign default_text = 'products.product.preorder' | t
+        assign button_text = 'products.product.preorder' | t
+      endif
+      unless current_variant.available
+        assign button_text = 'products.product.sold_out' | t
+      endunless
+    -%}
+
+    <button
+      {% if product.empty? %}type="button"{% else %}type="submit"{% endif %}
+      name="add" 
+      data-add-to-cart
+      class="btn btn--full add-to-cart disabled_button {% if enable_dynamic_buttons and product.selling_plan_groups.size == 0 %} add-to-cart--secondary{% endif %}"
+      {% unless current_variant.available %} disabled="disabled"{% endunless %}>
+      <span data-add-to-cart-text data-default-text="{{ default_text }}" class="btn-text">
+        {{ button_text }}
+      </span>
+      <span class="btn-disable-text">{{ section.settings.color_block_btn_error }}</span>
+    </button>
+
+    {% if enable_dynamic_buttons %}
+      {{ form | payment_button }}
+    {% endif %}
+
+  {% if enable_dynamic_buttons %}
+    </div>
+  {% endif %}
+
+  <div class="shopify-payment-terms product__policies">{{ form | payment_terms }}</div>
+
+  <select name="id" data-product-select class="product-single__variants no-js">
+    {%- for variant in product.variants -%}
+      {% if variant.available %}
+        <option {% if variant == product.selected_or_first_available_variant %}
+          selected="selected" {% endif %}
+          value="{{ variant.id }}">
+          {{ variant.title }} - {{ variant.price | money_with_currency }}
+        </option>
+      {% else %}
+        <option disabled="disabled">
+          {{ variant.title }} - {{ 'products.product.sold_out' | t }}
+        </option>
+      {% endif %}
+    {%- endfor -%}
+  </select>
+
+  <textarea data-variant-json class="hide" aria-hidden="true" aria-label="Product JSON">
+    {{ product.variants | json }}
+  </textarea>
+  {% if product.options.size > 1 %}
+    <textarea data-current-variant-json class="hide" aria-hidden="true" aria-label="Variant JSON">
+      {{ current_variant | json }}
+    </textarea>
+  {% endif %}
+{% endform %}
+
+
+<script>
+$('body').on('click', '.bundler-products-picker-trigger_button', function() {
+  if($(this).hasClass('bundler-products-picker-trigger_button---is-focused')) {
+    $(this).toggleClass('bundler-products-picker-trigger_button---is-focused');
+  } else {
+    $('.bundler-products-picker-trigger_button').removeClass('bundler-products-picker-trigger_button---is-focused');
+    $(this).addClass('bundler-products-picker-trigger_button---is-focused');
+  }
+});
+$('body').on('click', '.bundler-products-picker-products-product_button', function() {
+  var img = $(this).attr('data-image-src');
+  var text = $(this).attr('data-alt');
+  var img_html = '<img src="'+img+'" class="bundler-products-picker-trigger_button-image">';
+  $(this).closest('.bundler-products-picker').find('.bundler-products-picker-trigger_button').html(img_html);
+  $(this).closest('.bundler-products-picker').find('.bundler-products-picker-trigger_button').removeClass('bundler-products-picker-trigger_button---is-focused');
+  var index = $(this).closest('.bundler-products-picker').attr('data-index');
+  if(index == 1) {
+    $("#color1").val(text);
+  } else if(index == 2) {
+    $("#color2").val(text);
+  } else if(index == 3) {
+    $("#color3").val(text);
+  } else if(index == 4) {
+    $("#color4").val(text);
+  } else if(index == 5) {
+    $("#color5").val(text);
+  }
+
+  var parentIndex = $(this).closest('.bundler-products').attr('data-parent-index');
+  if(parentIndex == 1) {
+    var color1 = $("#color1").val();
+    if(color1 != '') {
+      $('.btn.add-to-cart').removeClass('disabled_button');
+    } else {
+      $('.btn.add-to-cart').addClass('disabled_button');
+    }
+  } else if(parentIndex == 2) {
+    var color1 = $("#color1").val();
+    var color2 = $("#color2").val();
+    var color3 = $("#color3").val();
+    if(color1 != '' && color2 != '' && color3 != '') {
+      $('.btn.add-to-cart').removeClass('disabled_button');
+    } else {
+      $('.btn.add-to-cart').addClass('disabled_button');
+    }
+  } else if(parentIndex == 3) {
+    var color1 = $("#color1").val();
+    var color2 = $("#color2").val();
+    var color3 = $("#color3").val();
+    var color4 = $("#color4").val();
+    var color5 = $("#color5").val();
+    if(color1 != '' && color2 != '' && color3 != '' && color4 != '' && color5 != '') {
+      $('.btn.add-to-cart').removeClass('disabled_button');
+    } else {
+      $('.btn.add-to-cart').addClass('disabled_button');
+    }
+  }
+  
+});
+  
+$('body').on('change', '.product-single__variants.no-js', function() {
+    // $("#ProductSelect-option-4").load(location.href + " #ProductSelect-option-inner");
+    // setTimeout(function(){  
+    //  $("#ProductSelect-option-4").load(location.href + " #ProductSelect-option-inner");
+    // }, 300);
+  $('.btn.add-to-cart').addClass('disabled_button');
+  //var svg_html = '<svg width="25" height="47" viewBox="0 0 25 47" fill="none" xmlns="http://www.w3.org/2000/svg" class="bundler-products-picker-trigger_button-image icon icon--full-color"> <path fill-rule="evenodd" clip-rule="evenodd" d="M0.571741 29.0815C0.601467 23.5593 1.19683 16.8654 3.24529 11.7139C5.26265 6.64068 6.75662 3.85151 8.17275 2.33642C8.89184 1.56708 9.59927 1.11619 10.35 0.864264C11.0921 0.615247 11.8489 0.570618 12.6406 0.570618C16.062 0.570618 19.6407 3.61478 22.3525 11.7366C23.7361 15.8805 24.4196 21.826 24.5279 27.2324C24.5821 29.9401 24.4922 32.5251 24.2705 34.6962C24.0503 36.853 23.6959 38.6461 23.1991 39.7405C20.9488 44.6968 16.2033 46.4804 11.7075 46.147C7.24 45.8157 2.87372 43.382 1.35507 39.7277C1.307 39.612 1.26529 39.4427 1.22723 39.2553C1.18713 39.0579 1.14497 38.8085 1.10222 38.5138C1.01663 37.9239 0.926813 37.1401 0.845895 36.2052C0.684024 34.3348 0.556845 31.8488 0.571741 29.0815ZM1.7516 39.5629C1.26331 38.388 -0.392252 22.0237 3.6443 11.8726C7.68086 1.72148 9.52139 1.00002 12.6406 1.00002C15.7597 1.00002 19.2431 3.77972 21.9452 11.8726C24.6725 20.0411 24.6725 35.4563 22.8081 39.5629C18.4936 49.0658 4.6244 46.4756 1.7516 39.5629ZM12.2111 23.3752V20.3242H12.5501V23.3752H15.6011L15.6011 23.7142H12.5501V26.7652H12.2111V23.7142H9.16011V23.3752H12.2111Z" fill="#000"></path> </svg>';
+  //$('.bundler-products-picker-trigger_button').html(svg_html);
+  var id = $(this).val();
+  var block1 = '<div class="bundler-products" id="block-one" data-parent-index="1"> <input type="hidden" name="properties[Vernis]" id="color1" value=""> <div class="bundler-products-picker"  data-index="1"> <button type="button" class="bundler-products-picker-trigger_button js_bundler-products-picker-trigger_button"> <svg width="25" height="47" viewBox="0 0 25 47" fill="none" xmlns="http://www.w3.org/2000/svg" class="bundler-products-picker-trigger_button-image icon icon--full-color"> <path fill-rule="evenodd" clip-rule="evenodd" d="M0.571741 29.0815C0.601467 23.5593 1.19683 16.8654 3.24529 11.7139C5.26265 6.64068 6.75662 3.85151 8.17275 2.33642C8.89184 1.56708 9.59927 1.11619 10.35 0.864264C11.0921 0.615247 11.8489 0.570618 12.6406 0.570618C16.062 0.570618 19.6407 3.61478 22.3525 11.7366C23.7361 15.8805 24.4196 21.826 24.5279 27.2324C24.5821 29.9401 24.4922 32.5251 24.2705 34.6962C24.0503 36.853 23.6959 38.6461 23.1991 39.7405C20.9488 44.6968 16.2033 46.4804 11.7075 46.147C7.24 45.8157 2.87372 43.382 1.35507 39.7277C1.307 39.612 1.26529 39.4427 1.22723 39.2553C1.18713 39.0579 1.14497 38.8085 1.10222 38.5138C1.01663 37.9239 0.926813 37.1401 0.845895 36.2052C0.684024 34.3348 0.556845 31.8488 0.571741 29.0815ZM1.7516 39.5629C1.26331 38.388 -0.392252 22.0237 3.6443 11.8726C7.68086 1.72148 9.52139 1.00002 12.6406 1.00002C15.7597 1.00002 19.2431 3.77972 21.9452 11.8726C24.6725 20.0411 24.6725 35.4563 22.8081 39.5629C18.4936 49.0658 4.6244 46.4756 1.7516 39.5629ZM12.2111 23.3752V20.3242H12.5501V23.3752H15.6011L15.6011 23.7142H12.5501V26.7652H12.2111V23.7142H9.16011V23.3752H12.2111Z" fill="#000"></path> </svg> </button> <div class="bundler-products-picker-products js-bundler-products-picker-products"> {%- for block in blocks -%} {%- if block.type == 'color_block' -%} <button type="button" class="bundler-products-picker-products-product_button js-bundler-products-picker-products-product_button {% unless block.settings.clickable %}bundler-products-picker-trigger_button---is-disabled{% endunless %}" data-alt="{{ block.settings.text }}" data-image-src="{{ block.settings.color_image | img_url: 'x122' }}"> <img src="{{ block.settings.color_image | img_url: 'x122' }}" alt="{{ block.settings.text }}" width="122" height="122" class="bundler-products-picker-products-product_button-image"> <span class="bundler-products-picker-products-product_button-label">{{ block.settings.text }}</span> </button> {% endif %} {% endfor %} </div> </div> <div class="bundler-products-picker"  data-index="2"> <button type="button" class="bundler-products-picker-trigger_button js_bundler-products-picker-trigger_button bundler-products-picker-trigger_button---is-disabled"> <svg width="25" height="47" viewBox="0 0 25 47" fill="none" xmlns="http://www.w3.org/2000/svg" class="bundler-products-picker-trigger_button-image icon icon--full-color"> <path fill-rule="evenodd" clip-rule="evenodd" d="M0.571741 29.0815C0.601467 23.5593 1.19683 16.8654 3.24529 11.7139C5.26265 6.64068 6.75662 3.85151 8.17275 2.33642C8.89184 1.56708 9.59927 1.11619 10.35 0.864264C11.0921 0.615247 11.8489 0.570618 12.6406 0.570618C16.062 0.570618 19.6407 3.61478 22.3525 11.7366C23.7361 15.8805 24.4196 21.826 24.5279 27.2324C24.5821 29.9401 24.4922 32.5251 24.2705 34.6962C24.0503 36.853 23.6959 38.6461 23.1991 39.7405C20.9488 44.6968 16.2033 46.4804 11.7075 46.147C7.24 45.8157 2.87372 43.382 1.35507 39.7277C1.307 39.612 1.26529 39.4427 1.22723 39.2553C1.18713 39.0579 1.14497 38.8085 1.10222 38.5138C1.01663 37.9239 0.926813 37.1401 0.845895 36.2052C0.684024 34.3348 0.556845 31.8488 0.571741 29.0815ZM1.7516 39.5629C1.26331 38.388 -0.392252 22.0237 3.6443 11.8726C7.68086 1.72148 9.52139 1.00002 12.6406 1.00002C15.7597 1.00002 19.2431 3.77972 21.9452 11.8726C24.6725 20.0411 24.6725 35.4563 22.8081 39.5629C18.4936 49.0658 4.6244 46.4756 1.7516 39.5629ZM12.2111 23.3752V20.3242H12.5501V23.3752H15.6011L15.6011 23.7142H12.5501V26.7652H12.2111V23.7142H9.16011V23.3752H12.2111Z" fill="#000"></path> </svg> </button> </div> <div class="bundler-products-picker"  data-index="2"> <button type="button" class="bundler-products-picker-trigger_button js_bundler-products-picker-trigger_button bundler-products-picker-trigger_button---is-disabled"> <svg width="25" height="47" viewBox="0 0 25 47" fill="none" xmlns="http://www.w3.org/2000/svg" class="bundler-products-picker-trigger_button-image icon icon--full-color"> <path fill-rule="evenodd" clip-rule="evenodd" d="M0.571741 29.0815C0.601467 23.5593 1.19683 16.8654 3.24529 11.7139C5.26265 6.64068 6.75662 3.85151 8.17275 2.33642C8.89184 1.56708 9.59927 1.11619 10.35 0.864264C11.0921 0.615247 11.8489 0.570618 12.6406 0.570618C16.062 0.570618 19.6407 3.61478 22.3525 11.7366C23.7361 15.8805 24.4196 21.826 24.5279 27.2324C24.5821 29.9401 24.4922 32.5251 24.2705 34.6962C24.0503 36.853 23.6959 38.6461 23.1991 39.7405C20.9488 44.6968 16.2033 46.4804 11.7075 46.147C7.24 45.8157 2.87372 43.382 1.35507 39.7277C1.307 39.612 1.26529 39.4427 1.22723 39.2553C1.18713 39.0579 1.14497 38.8085 1.10222 38.5138C1.01663 37.9239 0.926813 37.1401 0.845895 36.2052C0.684024 34.3348 0.556845 31.8488 0.571741 29.0815ZM1.7516 39.5629C1.26331 38.388 -0.392252 22.0237 3.6443 11.8726C7.68086 1.72148 9.52139 1.00002 12.6406 1.00002C15.7597 1.00002 19.2431 3.77972 21.9452 11.8726C24.6725 20.0411 24.6725 35.4563 22.8081 39.5629C18.4936 49.0658 4.6244 46.4756 1.7516 39.5629ZM12.2111 23.3752V20.3242H12.5501V23.3752H15.6011L15.6011 23.7142H12.5501V26.7652H12.2111V23.7142H9.16011V23.3752H12.2111Z" fill="#000"></path> </svg> </button> </div> </div>';
+  var block2 = '<div class="bundler-products" id="block-two" data-parent-index="2"> <input type="hidden" name="properties[Vernis 1]" id="color1" value=""> <input type="hidden" name="properties[Vernis 2]" id="color2" value=""> <input type="hidden" name="properties[Vernis 3]" id="color3" value=""> <div class="bundler-products-picker"  data-index="1"> <button type="button" class="bundler-products-picker-trigger_button js_bundler-products-picker-trigger_button"> <svg width="25" height="47" viewBox="0 0 25 47" fill="none" xmlns="http://www.w3.org/2000/svg" class="bundler-products-picker-trigger_button-image icon icon--full-color"> <path fill-rule="evenodd" clip-rule="evenodd" d="M0.571741 29.0815C0.601467 23.5593 1.19683 16.8654 3.24529 11.7139C5.26265 6.64068 6.75662 3.85151 8.17275 2.33642C8.89184 1.56708 9.59927 1.11619 10.35 0.864264C11.0921 0.615247 11.8489 0.570618 12.6406 0.570618C16.062 0.570618 19.6407 3.61478 22.3525 11.7366C23.7361 15.8805 24.4196 21.826 24.5279 27.2324C24.5821 29.9401 24.4922 32.5251 24.2705 34.6962C24.0503 36.853 23.6959 38.6461 23.1991 39.7405C20.9488 44.6968 16.2033 46.4804 11.7075 46.147C7.24 45.8157 2.87372 43.382 1.35507 39.7277C1.307 39.612 1.26529 39.4427 1.22723 39.2553C1.18713 39.0579 1.14497 38.8085 1.10222 38.5138C1.01663 37.9239 0.926813 37.1401 0.845895 36.2052C0.684024 34.3348 0.556845 31.8488 0.571741 29.0815ZM1.7516 39.5629C1.26331 38.388 -0.392252 22.0237 3.6443 11.8726C7.68086 1.72148 9.52139 1.00002 12.6406 1.00002C15.7597 1.00002 19.2431 3.77972 21.9452 11.8726C24.6725 20.0411 24.6725 35.4563 22.8081 39.5629C18.4936 49.0658 4.6244 46.4756 1.7516 39.5629ZM12.2111 23.3752V20.3242H12.5501V23.3752H15.6011L15.6011 23.7142H12.5501V26.7652H12.2111V23.7142H9.16011V23.3752H12.2111Z" fill="#000"></path> </svg> </button> <div class="bundler-products-picker-products js-bundler-products-picker-products"> {%- for block in blocks -%} {%- if block.type == 'color_block' -%} <button type="button" class="bundler-products-picker-products-product_button js-bundler-products-picker-products-product_button {% unless block.settings.clickable %}bundler-products-picker-trigger_button---is-disabled{% endunless %}" data-alt="{{ block.settings.text }}" data-image-src="{{ block.settings.color_image | img_url: 'x122' }}"> <img src="{{ block.settings.color_image | img_url: 'x122' }}" alt="{{ block.settings.text }}" width="122" height="122" class="bundler-products-picker-products-product_button-image"> <span class="bundler-products-picker-products-product_button-label">{{ block.settings.text }}</span> </button> {% endif %} {% endfor %} </div> </div> <div class="bundler-products-picker"  data-index="2"> <button type="button" class="bundler-products-picker-trigger_button js_bundler-products-picker-trigger_button"> <svg width="25" height="47" viewBox="0 0 25 47" fill="none" xmlns="http://www.w3.org/2000/svg" class="bundler-products-picker-trigger_button-image icon icon--full-color"> <path fill-rule="evenodd" clip-rule="evenodd" d="M0.571741 29.0815C0.601467 23.5593 1.19683 16.8654 3.24529 11.7139C5.26265 6.64068 6.75662 3.85151 8.17275 2.33642C8.89184 1.56708 9.59927 1.11619 10.35 0.864264C11.0921 0.615247 11.8489 0.570618 12.6406 0.570618C16.062 0.570618 19.6407 3.61478 22.3525 11.7366C23.7361 15.8805 24.4196 21.826 24.5279 27.2324C24.5821 29.9401 24.4922 32.5251 24.2705 34.6962C24.0503 36.853 23.6959 38.6461 23.1991 39.7405C20.9488 44.6968 16.2033 46.4804 11.7075 46.147C7.24 45.8157 2.87372 43.382 1.35507 39.7277C1.307 39.612 1.26529 39.4427 1.22723 39.2553C1.18713 39.0579 1.14497 38.8085 1.10222 38.5138C1.01663 37.9239 0.926813 37.1401 0.845895 36.2052C0.684024 34.3348 0.556845 31.8488 0.571741 29.0815ZM1.7516 39.5629C1.26331 38.388 -0.392252 22.0237 3.6443 11.8726C7.68086 1.72148 9.52139 1.00002 12.6406 1.00002C15.7597 1.00002 19.2431 3.77972 21.9452 11.8726C24.6725 20.0411 24.6725 35.4563 22.8081 39.5629C18.4936 49.0658 4.6244 46.4756 1.7516 39.5629ZM12.2111 23.3752V20.3242H12.5501V23.3752H15.6011L15.6011 23.7142H12.5501V26.7652H12.2111V23.7142H9.16011V23.3752H12.2111Z" fill="#000"></path> </svg> </button> <div class="bundler-products-picker-products js-bundler-products-picker-products"> {%- for block in blocks -%} {%- if block.type == 'color_block' -%} <button type="button" class="bundler-products-picker-products-product_button js-bundler-products-picker-products-product_button  {% unless block.settings.clickable %}bundler-products-picker-trigger_button---is-disabled{% endunless %}" data-alt="{{ block.settings.text }}" data-image-src="{{ block.settings.color_image | img_url: 'x122' }}"> <img src="{{ block.settings.color_image | img_url: 'x122' }}" alt="{{ block.settings.text }}" width="122" height="122" class="bundler-products-picker-products-product_button-image"> <span class="bundler-products-picker-products-product_button-label">{{ block.settings.text }}</span> </button> {% endif %} {% endfor %} </div> </div> <div class="bundler-products-picker"  data-index="3"> <button type="button" class="bundler-products-picker-trigger_button js_bundler-products-picker-trigger_button"> <svg width="25" height="47" viewBox="0 0 25 47" fill="none" xmlns="http://www.w3.org/2000/svg" class="bundler-products-picker-trigger_button-image icon icon--full-color"> <path fill-rule="evenodd" clip-rule="evenodd" d="M0.571741 29.0815C0.601467 23.5593 1.19683 16.8654 3.24529 11.7139C5.26265 6.64068 6.75662 3.85151 8.17275 2.33642C8.89184 1.56708 9.59927 1.11619 10.35 0.864264C11.0921 0.615247 11.8489 0.570618 12.6406 0.570618C16.062 0.570618 19.6407 3.61478 22.3525 11.7366C23.7361 15.8805 24.4196 21.826 24.5279 27.2324C24.5821 29.9401 24.4922 32.5251 24.2705 34.6962C24.0503 36.853 23.6959 38.6461 23.1991 39.7405C20.9488 44.6968 16.2033 46.4804 11.7075 46.147C7.24 45.8157 2.87372 43.382 1.35507 39.7277C1.307 39.612 1.26529 39.4427 1.22723 39.2553C1.18713 39.0579 1.14497 38.8085 1.10222 38.5138C1.01663 37.9239 0.926813 37.1401 0.845895 36.2052C0.684024 34.3348 0.556845 31.8488 0.571741 29.0815ZM1.7516 39.5629C1.26331 38.388 -0.392252 22.0237 3.6443 11.8726C7.68086 1.72148 9.52139 1.00002 12.6406 1.00002C15.7597 1.00002 19.2431 3.77972 21.9452 11.8726C24.6725 20.0411 24.6725 35.4563 22.8081 39.5629C18.4936 49.0658 4.6244 46.4756 1.7516 39.5629ZM12.2111 23.3752V20.3242H12.5501V23.3752H15.6011L15.6011 23.7142H12.5501V26.7652H12.2111V23.7142H9.16011V23.3752H12.2111Z" fill="#000"></path> </svg> </button> <div class="bundler-products-picker-products js-bundler-products-picker-products"> {%- for block in blocks -%} {%- if block.type == 'color_block' -%} <button type="button" class="bundler-products-picker-products-product_button js-bundler-products-picker-products-product_button  {% unless block.settings.clickable %}bundler-products-picker-trigger_button---is-disabled{% endunless %}" data-alt="{{ block.settings.text }}" data-image-src="{{ block.settings.color_image | img_url: 'x122' }}"> <img src="{{ block.settings.color_image | img_url: 'x122' }}" alt="{{ block.settings.text }}" width="122" height="122" class="bundler-products-picker-products-product_button-image"> <span class="bundler-products-picker-products-product_button-label">{{ block.settings.text }}</span> </button> {% endif %} {% endfor %} </div> </div> </div>';
+  var block3 = '<div class="bundler-products" id="block-three" data-parent-index="3"> <input type="hidden" name="properties[Vernis 1]" id="color1" value=""> <input type="hidden" name="properties[Vernis 2]" id="color2" value=""> <input type="hidden" name="properties[Vernis 3]" id="color3" value=""> <input type="hidden" name="properties[Vernis 4]" id="color4" value=""> <input type="hidden" name="properties[Vernis 5]" id="color5" value=""> <div class="bundler-products-picker"  data-index="1"> <button type="button" class="bundler-products-picker-trigger_button js_bundler-products-picker-trigger_button"> <svg width="25" height="47" viewBox="0 0 25 47" fill="none" xmlns="http://www.w3.org/2000/svg" class="bundler-products-picker-trigger_button-image icon icon--full-color"> <path fill-rule="evenodd" clip-rule="evenodd" d="M0.571741 29.0815C0.601467 23.5593 1.19683 16.8654 3.24529 11.7139C5.26265 6.64068 6.75662 3.85151 8.17275 2.33642C8.89184 1.56708 9.59927 1.11619 10.35 0.864264C11.0921 0.615247 11.8489 0.570618 12.6406 0.570618C16.062 0.570618 19.6407 3.61478 22.3525 11.7366C23.7361 15.8805 24.4196 21.826 24.5279 27.2324C24.5821 29.9401 24.4922 32.5251 24.2705 34.6962C24.0503 36.853 23.6959 38.6461 23.1991 39.7405C20.9488 44.6968 16.2033 46.4804 11.7075 46.147C7.24 45.8157 2.87372 43.382 1.35507 39.7277C1.307 39.612 1.26529 39.4427 1.22723 39.2553C1.18713 39.0579 1.14497 38.8085 1.10222 38.5138C1.01663 37.9239 0.926813 37.1401 0.845895 36.2052C0.684024 34.3348 0.556845 31.8488 0.571741 29.0815ZM1.7516 39.5629C1.26331 38.388 -0.392252 22.0237 3.6443 11.8726C7.68086 1.72148 9.52139 1.00002 12.6406 1.00002C15.7597 1.00002 19.2431 3.77972 21.9452 11.8726C24.6725 20.0411 24.6725 35.4563 22.8081 39.5629C18.4936 49.0658 4.6244 46.4756 1.7516 39.5629ZM12.2111 23.3752V20.3242H12.5501V23.3752H15.6011L15.6011 23.7142H12.5501V26.7652H12.2111V23.7142H9.16011V23.3752H12.2111Z" fill="#000"></path> </svg> </button> <div class="bundler-products-picker-products js-bundler-products-picker-products"> {%- for block in blocks -%} {%- if block.type == 'color_block' -%} <button type="button" class="bundler-products-picker-products-product_button js-bundler-products-picker-products-product_button  {% unless block.settings.clickable %}bundler-products-picker-trigger_button---is-disabled{% endunless %}" data-alt="{{ block.settings.text }}" data-image-src="{{ block.settings.color_image | img_url: 'x122' }}"> <img src="{{ block.settings.color_image | img_url: 'x122' }}" alt="{{ block.settings.text }}" width="122" height="122" class="bundler-products-picker-products-product_button-image"> <span class="bundler-products-picker-products-product_button-label">{{ block.settings.text }}</span> </button> {% endif %} {% endfor %} </div> </div> <div class="bundler-products-picker"  data-index="2"> <button type="button" class="bundler-products-picker-trigger_button js_bundler-products-picker-trigger_button"> <svg width="25" height="47" viewBox="0 0 25 47" fill="none" xmlns="http://www.w3.org/2000/svg" class="bundler-products-picker-trigger_button-image icon icon--full-color"> <path fill-rule="evenodd" clip-rule="evenodd" d="M0.571741 29.0815C0.601467 23.5593 1.19683 16.8654 3.24529 11.7139C5.26265 6.64068 6.75662 3.85151 8.17275 2.33642C8.89184 1.56708 9.59927 1.11619 10.35 0.864264C11.0921 0.615247 11.8489 0.570618 12.6406 0.570618C16.062 0.570618 19.6407 3.61478 22.3525 11.7366C23.7361 15.8805 24.4196 21.826 24.5279 27.2324C24.5821 29.9401 24.4922 32.5251 24.2705 34.6962C24.0503 36.853 23.6959 38.6461 23.1991 39.7405C20.9488 44.6968 16.2033 46.4804 11.7075 46.147C7.24 45.8157 2.87372 43.382 1.35507 39.7277C1.307 39.612 1.26529 39.4427 1.22723 39.2553C1.18713 39.0579 1.14497 38.8085 1.10222 38.5138C1.01663 37.9239 0.926813 37.1401 0.845895 36.2052C0.684024 34.3348 0.556845 31.8488 0.571741 29.0815ZM1.7516 39.5629C1.26331 38.388 -0.392252 22.0237 3.6443 11.8726C7.68086 1.72148 9.52139 1.00002 12.6406 1.00002C15.7597 1.00002 19.2431 3.77972 21.9452 11.8726C24.6725 20.0411 24.6725 35.4563 22.8081 39.5629C18.4936 49.0658 4.6244 46.4756 1.7516 39.5629ZM12.2111 23.3752V20.3242H12.5501V23.3752H15.6011L15.6011 23.7142H12.5501V26.7652H12.2111V23.7142H9.16011V23.3752H12.2111Z" fill="#000"></path> </svg> </button> <div class="bundler-products-picker-products js-bundler-products-picker-products"> {%- for block in blocks -%} {%- if block.type == 'color_block' -%} <button type="button" class="bundler-products-picker-products-product_button js-bundler-products-picker-products-product_button  {% unless block.settings.clickable %}bundler-products-picker-trigger_button---is-disabled{% endunless %}" data-alt="{{ block.settings.text }}" data-image-src="{{ block.settings.color_image | img_url: 'x122' }}"> <img src="{{ block.settings.color_image | img_url: 'x122' }}" alt="{{ block.settings.text }}" width="122" height="122" class="bundler-products-picker-products-product_button-image"> <span class="bundler-products-picker-products-product_button-label">{{ block.settings.text }}</span> </button> {% endif %} {% endfor %} </div> </div> <div class="bundler-products-picker"  data-index="3"> <button type="button" class="bundler-products-picker-trigger_button js_bundler-products-picker-trigger_button"> <svg width="25" height="47" viewBox="0 0 25 47" fill="none" xmlns="http://www.w3.org/2000/svg" class="bundler-products-picker-trigger_button-image icon icon--full-color"> <path fill-rule="evenodd" clip-rule="evenodd" d="M0.571741 29.0815C0.601467 23.5593 1.19683 16.8654 3.24529 11.7139C5.26265 6.64068 6.75662 3.85151 8.17275 2.33642C8.89184 1.56708 9.59927 1.11619 10.35 0.864264C11.0921 0.615247 11.8489 0.570618 12.6406 0.570618C16.062 0.570618 19.6407 3.61478 22.3525 11.7366C23.7361 15.8805 24.4196 21.826 24.5279 27.2324C24.5821 29.9401 24.4922 32.5251 24.2705 34.6962C24.0503 36.853 23.6959 38.6461 23.1991 39.7405C20.9488 44.6968 16.2033 46.4804 11.7075 46.147C7.24 45.8157 2.87372 43.382 1.35507 39.7277C1.307 39.612 1.26529 39.4427 1.22723 39.2553C1.18713 39.0579 1.14497 38.8085 1.10222 38.5138C1.01663 37.9239 0.926813 37.1401 0.845895 36.2052C0.684024 34.3348 0.556845 31.8488 0.571741 29.0815ZM1.7516 39.5629C1.26331 38.388 -0.392252 22.0237 3.6443 11.8726C7.68086 1.72148 9.52139 1.00002 12.6406 1.00002C15.7597 1.00002 19.2431 3.77972 21.9452 11.8726C24.6725 20.0411 24.6725 35.4563 22.8081 39.5629C18.4936 49.0658 4.6244 46.4756 1.7516 39.5629ZM12.2111 23.3752V20.3242H12.5501V23.3752H15.6011L15.6011 23.7142H12.5501V26.7652H12.2111V23.7142H9.16011V23.3752H12.2111Z" fill="#000"></path> </svg> </button> <div class="bundler-products-picker-products js-bundler-products-picker-products"> {%- for block in blocks -%} {%- if block.type == 'color_block' -%} <button type="button" class="bundler-products-picker-products-product_button js-bundler-products-picker-products-product_button  {% unless block.settings.clickable %}bundler-products-picker-trigger_button---is-disabled{% endunless %}" data-alt="{{ block.settings.text }}" data-image-src="{{ block.settings.color_image | img_url: 'x122' }}"> <img src="{{ block.settings.color_image | img_url: 'x122' }}" alt="{{ block.settings.text }}" width="122" height="122" class="bundler-products-picker-products-product_button-image"> <span class="bundler-products-picker-products-product_button-label">{{ block.settings.text }}</span> </button> {% endif %} {% endfor %} </div> </div> <div class="bundler-products-picker"  data-index="4"> <button type="button" class="bundler-products-picker-trigger_button js_bundler-products-picker-trigger_button"> <svg width="25" height="47" viewBox="0 0 25 47" fill="none" xmlns="http://www.w3.org/2000/svg" class="bundler-products-picker-trigger_button-image icon icon--full-color"> <path fill-rule="evenodd" clip-rule="evenodd" d="M0.571741 29.0815C0.601467 23.5593 1.19683 16.8654 3.24529 11.7139C5.26265 6.64068 6.75662 3.85151 8.17275 2.33642C8.89184 1.56708 9.59927 1.11619 10.35 0.864264C11.0921 0.615247 11.8489 0.570618 12.6406 0.570618C16.062 0.570618 19.6407 3.61478 22.3525 11.7366C23.7361 15.8805 24.4196 21.826 24.5279 27.2324C24.5821 29.9401 24.4922 32.5251 24.2705 34.6962C24.0503 36.853 23.6959 38.6461 23.1991 39.7405C20.9488 44.6968 16.2033 46.4804 11.7075 46.147C7.24 45.8157 2.87372 43.382 1.35507 39.7277C1.307 39.612 1.26529 39.4427 1.22723 39.2553C1.18713 39.0579 1.14497 38.8085 1.10222 38.5138C1.01663 37.9239 0.926813 37.1401 0.845895 36.2052C0.684024 34.3348 0.556845 31.8488 0.571741 29.0815ZM1.7516 39.5629C1.26331 38.388 -0.392252 22.0237 3.6443 11.8726C7.68086 1.72148 9.52139 1.00002 12.6406 1.00002C15.7597 1.00002 19.2431 3.77972 21.9452 11.8726C24.6725 20.0411 24.6725 35.4563 22.8081 39.5629C18.4936 49.0658 4.6244 46.4756 1.7516 39.5629ZM12.2111 23.3752V20.3242H12.5501V23.3752H15.6011L15.6011 23.7142H12.5501V26.7652H12.2111V23.7142H9.16011V23.3752H12.2111Z" fill="#000"></path> </svg> </button> <div class="bundler-products-picker-products js-bundler-products-picker-products"> {%- for block in blocks -%} {%- if block.type == 'color_block' -%} <button type="button" class="bundler-products-picker-products-product_button js-bundler-products-picker-products-product_button  {% unless block.settings.clickable %}bundler-products-picker-trigger_button---is-disabled{% endunless %}" data-alt="{{ block.settings.text }}" data-image-src="{{ block.settings.color_image | img_url: 'x122' }}"> <img src="{{ block.settings.color_image | img_url: 'x122' }}" alt="{{ block.settings.text }}" width="122" height="122" class="bundler-products-picker-products-product_button-image"> <span class="bundler-products-picker-products-product_button-label">{{ block.settings.text }}</span> </button> {% endif %} {% endfor %} </div> </div> <div class="bundler-products-picker" data-index="5"> <button type="button" class="bundler-products-picker-trigger_button js_bundler-products-picker-trigger_button"> <svg width="25" height="47" viewBox="0 0 25 47" fill="none" xmlns="http://www.w3.org/2000/svg" class="bundler-products-picker-trigger_button-image icon icon--full-color"> <path fill-rule="evenodd" clip-rule="evenodd" d="M0.571741 29.0815C0.601467 23.5593 1.19683 16.8654 3.24529 11.7139C5.26265 6.64068 6.75662 3.85151 8.17275 2.33642C8.89184 1.56708 9.59927 1.11619 10.35 0.864264C11.0921 0.615247 11.8489 0.570618 12.6406 0.570618C16.062 0.570618 19.6407 3.61478 22.3525 11.7366C23.7361 15.8805 24.4196 21.826 24.5279 27.2324C24.5821 29.9401 24.4922 32.5251 24.2705 34.6962C24.0503 36.853 23.6959 38.6461 23.1991 39.7405C20.9488 44.6968 16.2033 46.4804 11.7075 46.147C7.24 45.8157 2.87372 43.382 1.35507 39.7277C1.307 39.612 1.26529 39.4427 1.22723 39.2553C1.18713 39.0579 1.14497 38.8085 1.10222 38.5138C1.01663 37.9239 0.926813 37.1401 0.845895 36.2052C0.684024 34.3348 0.556845 31.8488 0.571741 29.0815ZM1.7516 39.5629C1.26331 38.388 -0.392252 22.0237 3.6443 11.8726C7.68086 1.72148 9.52139 1.00002 12.6406 1.00002C15.7597 1.00002 19.2431 3.77972 21.9452 11.8726C24.6725 20.0411 24.6725 35.4563 22.8081 39.5629C18.4936 49.0658 4.6244 46.4756 1.7516 39.5629ZM12.2111 23.3752V20.3242H12.5501V23.3752H15.6011L15.6011 23.7142H12.5501V26.7652H12.2111V23.7142H9.16011V23.3752H12.2111Z" fill="#000"></path> </svg> </button> <div class="bundler-products-picker-products js-bundler-products-picker-products"> {%- for block in blocks -%} {%- if block.type == 'color_block' -%} <button type="button" class="bundler-products-picker-products-product_button js-bundler-products-picker-products-product_button  {% unless block.settings.clickable %}bundler-products-picker-trigger_button---is-disabled{% endunless %}" data-alt="{{ block.settings.text }}" data-image-src="{{ block.settings.color_image | img_url: 'x122' }}"> <img src="{{ block.settings.color_image | img_url: 'x122' }}" alt="{{ block.settings.text }}" width="122" height="122" class="bundler-products-picker-products-product_button-image"> <span class="bundler-products-picker-products-product_button-label">{{ block.settings.text }}</span> </button> {% endif %} {% endfor %} </div> </div> </div>';
+
+  if(id == 41778656673971) {
+    $('#ProductSelect-option-4 #ProductSelect-option-inner').html(block1);
+  } else if(id == 41778656706739) {
+    $('#ProductSelect-option-4 #ProductSelect-option-inner').html(block2);
+  } else if(id == 41781740142771) {
+    $('#ProductSelect-option-4 #ProductSelect-option-inner').html(block3);
+  }
+
+});
+</script>
