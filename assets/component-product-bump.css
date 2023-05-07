@@ -1,0 +1,60 @@
+.bump-container {
+  border: 2px solid black;
+  padding: 10px;
+}
+
+.bump-checkbox-container {
+  background-color: #f4f4f4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.bump-content-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
+  padding: 10px 0;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.bump-datas a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  margin: 0;
+}
+
+.bump-product-title,
+.bump-description p,
+.bump-product-price {
+  margin: 0;
+}
+
+.bump-description p {
+  font-size: 14px;
+}
+
+.bump-product-price {
+  color: black;
+  font-weight: bold;
+}

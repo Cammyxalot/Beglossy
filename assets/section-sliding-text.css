@@ -1,0 +1,23 @@
+.sliding-text-container {
+  width: 100%;
+  font-weight: 700;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+}
+
+.sliding-text-container .title {
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-reduce\:hidden {
+    display: none;
+  }
+
+  .motion-reduce\:block {
+    display: block;
+  }
+}
